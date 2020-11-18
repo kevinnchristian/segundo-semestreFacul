@@ -1,0 +1,12 @@
+from tkinter import Tk, Label, PhotoImage, TOP, BOTTOM  # Biblioteca para fazer interfaces
+
+root = Tk()  # Instanciando objeto da janela
+photo = PhotoImage(file='./assets/images/computer.gif').subsample(2)  # Objeto foto, subsample diminui o tamanho da imagem e faz uma amostragem
+
+# Diretivas geometry manager
+image = Label(master=root, image=photo)
+image.pack(side=TOP)   # Empacotamento de todos os componenetes dentro da tela que criamos
+text = Label(master=root, font=('Fira Code', 14), text='Hello Class the UNIVESP!!!')
+text.pack(side=BOTTOM)   # Criando label dentro da nossa tela
+
+root.mainloop()
